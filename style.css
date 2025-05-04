@@ -1,0 +1,148 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+/* Navigation */
+nav {
+  background-color: #374151;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+
+nav a {
+  color: #f9fafb;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #3b82f6;
+  transform: scale(1.05);
+}
+
+/* Main Content Container */
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #1d4ed8;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e0e7ff;
+  padding-bottom: 6px;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card ul li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  padding-left: 20px;
+  position: relative;
+}
+
+.card ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937;
+  color: #d1d5db;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

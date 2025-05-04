@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Certifications - Parthik Chavda</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .certificates {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .certificate-item {
+      width: 350px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 10px;
+      background: #fdfdfd;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .certificate-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .certificate-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .certificate-item h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .certificates {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>🏆 Certifications</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="languages.html">Languages</a>
+    <a href="expertise.html">Expertise</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="certificates">
+    <div class="certificate-item">
+      <h3>📜 Udemy Full Stack Crash Course<br>(2025)</h3>
+      <img src="certificates/udemy_fullstack.jpg" alt="Udemy Certificate" />
+    </div>
+
+    <div class="certificate-item">
+      <h3>📜 Royal Technosoft Bootcamp<br>(2022)</h3>
+      <img src="certificates/royal_technosoft_bootcamp.jpg" alt="Royal Technosoft Certificate" />
+    </div>
+  </main>
+</body>
+</html>
